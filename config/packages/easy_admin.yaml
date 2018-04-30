@@ -1,0 +1,43 @@
+easy_admin:
+    entities:
+        Player:
+            class: App\Entity\Player
+        Question:
+            class: App\Entity\Question
+            list:
+                fields:
+                    - { property: 'id', label: 'Contact' }
+                    - 'label'
+                    - 'active'
+                    - 'point'
+            form:
+                fields:
+                    - 'label'
+                    - 'point'
+                    - 'active'
+                    - {property: 'answers', type: 'collection', type_options: {entry_type: App\Form\AnswerType, by_reference: false}}
+
+    site_name: 'Quiz'
+    show:
+        title: '%%entity_label%% (#%%entity_id%%)'
+    disabled_actions: []
+    list:
+    list:
+        actions:
+            - { name: 'show', icon: 'search' }
+            - { name: 'edit', icon: 'pencil' }
+            - { name: 'delete', icon: 'remove' }
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    design:
+        color_scheme: 'light'
+        brand_color: 'green'
+        menu:
+#            - { entity: 'Product', rel: 'dns-prefetch preconnect' }
+            - { entity: 'Player' }
+            - { entity: 'Question' }
+            - { label: 'Users' }
+            - { label: 'Homepage', url: 'http://example.com', rel: 'index' }
+            - { label: 'Search', url: 'https://google.com', children: ['Player'] }
