@@ -9,15 +9,15 @@
 // });
 
 import Vue from 'vue';
+import App from './components/App'
 
 
 /**
  * Create a fresh Vue Application instance
  */
-var app = new Vue({
+new Vue({
     el: '#app',
     delimiters: ['${', '}'],
-    data: {
-        message: 'Hello Vue!'
-    }
-})
+    components: [ App ],
+    render: h => h(App)
+});

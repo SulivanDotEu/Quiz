@@ -22,14 +22,7 @@
 
         {{ dump(context) }}
 
-        <div id="app">
-            <form>
-                <input type="text" v-model="message" />
-            </form>
-
-            Message : "${ message }"
-        </div>
-
+        <div id="app"></div>
 
     </div>
 {% endblock %}
@@ -39,5 +32,9 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('build/js/app.js') }}"></script>
+    <script>
+        let context = {{ context|json_encode|raw }};
+    </script>
+
+    <script src="{{ asset('build/js/main.js') }}"></script>
 {% endblock %}
