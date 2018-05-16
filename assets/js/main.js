@@ -1,7 +1,7 @@
-// var $ = require('jquery');
+var $ = require('jquery');
 // var greet = require('./greet');
 //
-// require('bootstrap-sass');
+require('bootstrap');
 //
 // $(document).ready(function() {
 //     $('[data-toggle="popover"]').popover();
@@ -9,15 +9,31 @@
 // });
 
 import Vue from 'vue';
+import VueResource from 'vue-resource'
 import App from './components/App'
 
+Vue.use(VueResource)
+
+// class ContextStore {
+//
+//     constructor()
+//     {
+//         this.state = {
+//
+//         }
+//     }
+//
+// }
 
 /**
  * Create a fresh Vue Application instance
  */
 new Vue({
     el: '#app',
+    data() {
+        return {
+        }
+    },
     delimiters: ['${', '}'],
-    components: [ App ],
     render: h => h(App)
 });

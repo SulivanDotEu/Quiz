@@ -20,9 +20,7 @@
     <div class="example-wrapper">
         <h1>Hello {{ player.name }}! ✅</h1>
 
-        {{ dump(context) }}
-
-        <div id="app"></div>
+        <div id="app" :context="'{{ context|json_encode|raw }}'"></div>
 
     </div>
 {% endblock %}
@@ -33,7 +31,7 @@
 
 {% block javascripts %}
     <script>
-        let context = {{ context|json_encode|raw }};
+        var context = {{ context|json_encode|raw }};
     </script>
 
     <script src="{{ asset('build/js/main.js') }}"></script>
