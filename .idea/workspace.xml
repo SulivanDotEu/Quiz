@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03a9971-246c-491e-8ea8-668bd7311585" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Answer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Question.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ContextService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/PlayerService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Answer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Context.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Question.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quiz.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/Example.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/public/play.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/public/play.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Question.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ContextService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ContextService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,53 +18,14 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4197131">
+    <splitter split-orientation="horizontal" split-proportion="0.46645072">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webpack.config.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="31" selection-start-line="31" selection-end-line="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="play.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/public/play.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#182#204#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ContextService.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ContextService.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Service/ContextService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="816">
-                  <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+                <state relative-caret-position="510">
+                  <caret line="55" selection-start-line="55" selection-end-line="55" />
                   <folding>
                     <element signature="e#115#137#0#PHP" expanded="true" />
                   </folding>
@@ -93,20 +36,17 @@
           <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Controller/ApiController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="958">
+                <state relative-caret-position="1258">
                   <caret line="84" column="23" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#118#154#0#PHP" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Question.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/UI/Question.php">
+          <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assets/js/components/App.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="5" selection-start-column="5" selection-end-column="5" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -114,68 +54,34 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf>
-              <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/assets/js/components/App.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="119">
-                      <caret line="7" column="62" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="62" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="Answer.php" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/UI/Answer.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="136">
-                      <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-                      <folding>
-                        <element signature="e#6#88#0#PHP" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="Question.vue" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/assets/js/components/Question.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="426">
-                      <caret line="77" column="39" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="39" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="Answer.vue" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/assets/js/components/Answer.vue">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="170">
-                      <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Answer.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/UI/Answer.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+                  <folding>
+                    <element signature="e#6#88#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Question.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assets/js/components/Question.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="618">
+                  <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app.js</find>
-      <find>Question</find>
-      <find>message</find>
-      <find>'~bootstrap-sass/assets/stylesheets/bootstrap'</find>
-      <find>showS</find>
-      <find>bootstrap</find>
-      <find>selectedQuestion</find>
-      <find>focusedQuestion</find>
       <find>activeQuestion</find>
       <find>acive</find>
       <find>selectAnswer</find>
@@ -185,7 +91,6 @@
       <find>cancelAnswer</find>
       <find>rest-</find>
       <find>rest</find>
-      <find>question</find>
       <find>questions</find>
       <find>ContextService</find>
       <find>player</find>
@@ -197,10 +102,21 @@
       <find>post</find>
       <find>changeFocus</find>
       <find>submitAnswers</find>
+      <find>selectedA,s</find>
+      <find>label</find>
+      <find>selected</find>
       <find>selectedAnswer</find>
+      <find>question</find>
+      <find>onSelectAnswer</find>
+      <find>select-answer</find>
+      <find>answer.id</find>
+      <find>question.selectedAnswer.id</find>
+      <find>focus</find>
     </findStrings>
     <replaceStrings>
       <replace>PlayerQuestion</replace>
+      <replace>answerId</replace>
+      <replace>selectedAnswerId</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\www\Quiz</dir>
@@ -252,11 +168,11 @@
         <option value="$PROJECT_DIR$/src/UI/Question.php" />
         <option value="$PROJECT_DIR$/src/UI/Answer.php" />
         <option value="$PROJECT_DIR$/templates/public/play.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/components/Question.vue" />
         <option value="$PROJECT_DIR$/src/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/assets/js/components/App.vue" />
         <option value="$PROJECT_DIR$/src/Service/ContextService.php" />
+        <option value="$PROJECT_DIR$/assets/js/components/App.vue" />
+        <option value="$PROJECT_DIR$/assets/js/components/Question.vue" />
       </list>
     </option>
   </component>
@@ -502,12 +418,13 @@
       <workItem from="1525077946684" duration="2788000" />
       <workItem from="1525162152767" duration="1899000" />
       <workItem from="1525875997652" duration="5608000" />
-      <workItem from="1526204547546" duration="25646000" />
+      <workItem from="1526204547546" duration="30651000" />
+      <workItem from="1526497371002" duration="1328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54814000" />
+    <option name="totallyTimeSpent" value="61147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -521,20 +438,20 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14109698" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,6 +461,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Question.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Answer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/dev/web_profiler.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -566,11 +497,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/twig-bridge/Extension/AssetExtension.php" />
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/font-awesome/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -657,16 +584,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/components/Example.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Example.vue" />
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -675,15 +593,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/app.scss">
@@ -823,10 +732,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
+        <state relative-caret-position="1258">
           <caret line="84" column="23" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/ContextService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
-            <element signature="e#118#154#0#PHP" expanded="true" />
+            <element signature="e#115#137#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -840,59 +777,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Answer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="459">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding>
             <element signature="e#6#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/main.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/components/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
+        <state relative-caret-position="170">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/components/Question.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="77" column="39" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/components/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="e#182#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/ContextService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-          <folding>
-            <element signature="e#115#137#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="618">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
         </state>
       </provider>
     </entry>

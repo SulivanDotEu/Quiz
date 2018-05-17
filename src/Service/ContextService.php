@@ -51,7 +51,6 @@ class ContextService
                 $uiQuestion->addAnswer($uiAnswer);
             }
 
-            $uiQuestion->selectedAnswer = $uiAnswer;
         }
 
         return $context;

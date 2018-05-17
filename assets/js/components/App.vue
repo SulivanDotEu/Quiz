@@ -3,11 +3,13 @@
         <question
                 v-for="question in context.questions"
                 v-bind:id="question.id"
-                v-bind:label="question.label"
-                v-bind:answers="question.answers"
-                v-bind:selectedAnswer="question.selectedAnswer"
+                v-bind:question="question"
                 v-bind:focus="focus"
-                v-bind:key="question.id"></question>
+                v-bind:key="question.id"
+                v-on:select-answer="onSelectAnswer"
+                v-on:confirm-answer="onSelectAnswer"
+                v-on:question-focus="changeFocus"
+        ></question>
     </div>
 </template>
 
@@ -18,7 +20,10 @@
         components: {Question},
         data() {
             return {
-                context: {questions: {}},
+                context: {
+                    questions: {},
+                    player: ""
+                },
                 focus: null,
             }
         },
@@ -29,17 +34,27 @@
                 console.log(this.context)
 
             }, (response) => {
-
                 console.log("erreur")
-
-
             })
         },
         methods: {
             changeFocus(value) {
                 this.focus = value;
             },
-            submitAnswers(){
+            onSelectAnswer(data) {
+
+                console.log(data)
+                let _question = this.context.questions.find(k => k.id === data.question.id)
+                let _questionIndex = this.context.questions.findIndex(k => k.id === data.question.id)
+                let _answer = (data.answer === null) ? null : _question.answers.find(k => k.id === data.answer.id);
+
+                console.log(_question, _answer)
+
+                this.context.questions[_questionIndex].selectedAnswer = _answer
+
+                this.submitAnswers();
+            },
+            submitAnswers() {
 
                 console.log(this.context)
 
