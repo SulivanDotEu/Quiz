@@ -19,7 +19,7 @@ class Question
     private $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", length=500)
      */
     private $label;
 
