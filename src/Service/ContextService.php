@@ -65,7 +65,6 @@ class ContextService
                 }
             }
 
-
             foreach ($question->getAnswers() as $answer) {
                 $uiAnswer = new Answer();
                 $uiAnswer->id = $answer->getId();
