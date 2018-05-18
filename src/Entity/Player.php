@@ -40,7 +40,7 @@ class Player
 
     /**
      * @var integer
-     * @ORM\Column(name="points", nullable=false, options={"default":0})
+     * @ORM\Column(name="points", type="integer", nullable=false, options={"default":0})
      * @Serializer\Type("integer")
      */
     private $points = 0;
