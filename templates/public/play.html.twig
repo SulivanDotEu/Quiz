@@ -32,6 +32,8 @@
 {% block javascripts %}
     <script>
         var context = {{ context|json_encode|raw }};
+        var contextGet = {{ url('api.context.get') }};
+        var contextSubmit = {{ url('api.context.submit') }};
     </script>
 
     <script src="{{ asset('build/js/main.js') }}"></script>

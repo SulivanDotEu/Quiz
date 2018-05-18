@@ -32,7 +32,7 @@
             }
         },
         mounted() {
-            this.$http.get('/api/context').then((response) => {
+            this.$http.get(contextGet).then((response) => {
 
                 this.context = response.data
                 console.log(this.context)
@@ -75,7 +75,7 @@
 
                 console.log(this.context)
 
-                this.$http.post('/api/submit', this.context).then((response) => {
+                this.$http.post(contextSubmit, this.context).then((response) => {
 
                     this.context = response.data
                     console.log(this.context)
