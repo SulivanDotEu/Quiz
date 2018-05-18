@@ -13,6 +13,10 @@ use PhpParser\Node\Stmt\Label;
  */
 class Question
 {
+    const STATE_EMTPY = 'EMPTY';
+    const STATE_SELECTED = 'SELECTED';
+    const STATE_CONFIRMED = 'CONFIRMED';
+
     /**
      * @var integer
      */
@@ -29,6 +33,12 @@ class Question
      * @Serializer\Type("App\UI\Answer")
      */
     public $selectedAnswer;
+
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    public $state = self::STATE_EMTPY;
 
     /**
      * @var Label string

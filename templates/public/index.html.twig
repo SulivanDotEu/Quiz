@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Hello guest!{% endblock %}
 
 {% block body %}
     <style>
@@ -18,19 +18,23 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+        <h1>Hello guest! ✅</h1>
 
-        This friendly message is coming from:
-        <ul>
-            <li>Your controller at <code><a href="{{ 'src/Controller/PublicController.php'|file_link(0) }}">src/Controller/PublicController.php</a></code>
-            </li>
-            <li>Your template at <code><a href="{{ 'templates/public/index.html.twig'|file_link(0) }}">templates/public/index.html.twig</a></code>
-            </li>
-        </ul>
+        <p>Veuillez entrer votre nom pour jouer au quiz.</p>
+        <p>Vous pouvez partager une même session avec une autre
+            personne. <br/> Pour cela, il faut vous connecter avec le même nom.</p>
+        <p>Attention, comme plusieurs personnes partagent le même nom, si vous utilisez le même nom de joueur, vous
+            partagerez la même session. N'hésitez donc pas à utiliser un pseudonyme.</p>
 
         {{ form(form) }}
 
+        <hr>
 
+        <p>
+            <small>Il est évident qu'avec un tel système, il est possible de tricher, tout comme il est possible pour nous de savoir qui a sucombé à la tentation :)</small>
+        </p>
+
+        <hr/>
         <ul>
             <li>Last player: {{ last_player }}</li>
             <li>List of previous player on this device:
@@ -45,9 +49,6 @@
                 <li>Application Environment: {{ app.environment }}</li>
             {% endif %}
         </ul>
-
-
-        <a href="google.com" class="btn btn-default">test</a>
     </div>
 {% endblock %}
 

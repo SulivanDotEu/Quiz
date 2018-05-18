@@ -29,4 +29,5 @@ class Answer
      * @var Label string
      */
     public $label;
+
 }

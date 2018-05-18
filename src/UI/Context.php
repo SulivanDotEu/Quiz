@@ -22,13 +22,17 @@ class Context
 
     /**
      * @var Player
-     *
      */
     public $player;
 
+
+    /**
+     * @var integer
+     */
+    public $points;
+
     /**
      * @var Question[]
-     * @Serializer\Type("array<App\UI\Question>")
      */
     public $questions = [];
 

@@ -3,10 +3,18 @@
 namespace App\Controller;
 
 
+use App\Entity\Answer;
+use App\Entity\Player;
+use App\Entity\PlayerChoice;
+use App\Entity\Question;
+use App\Repository\PlayerChoiceRepository;
 use App\Repository\PlayerRepository;
 use App\Repository\QuestionRepository;
 use App\Service\ContextService;
+use App\Service\PlayerService;
 use App\UI\Context;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,11 +34,17 @@ class ApiController extends FOSRestController
     /** @var PlayerRepository */
     private $playerRepository;
 
+    /** @var PlayerService */
+    private $playerService;
+
     /** @var SessionInterface */
     private $session;
 
     /** @var QuestionRepository */
     private $questionRepository;
+
+    /** @var PlayerChoiceRepository */
+    private $playerChoiceRepository;
 
     /** @var $contextService */
     private $contextService;
@@ -39,20 +53,29 @@ class ApiController extends FOSRestController
 
     const LAST_PLAYER = 'last_player';
 
+    /** @var EntityManager */
+    private $entityManager;
+
     /**
      * @param PlayerRepository $playerRepository
      * @param Session $session
      * @param QuestionRepository $questionRepository
      */
-    public function __construct(PlayerRepository $playerRepository,
+    public function __construct(EntityManagerInterface $entityManager,
+                                PlayerRepository $playerRepository,
                                 SessionInterface $session,
                                 QuestionRepository $questionRepository,
-                                ContextService $contextService)
+                                PlayerChoiceRepository $playerChoiceRepository,
+                                ContextService $contextService,
+                                PlayerService $playerService)
     {
+        $this->entityManager = $entityManager;
         $this->playerRepository = $playerRepository;
         $this->session = $session;
         $this->questionRepository = $questionRepository;
         $this->contextService = $contextService;
+        $this->playerService = $playerService;
+        $this->playerChoiceRepository = $playerChoiceRepository;
     }
 
 
@@ -61,12 +84,9 @@ class ApiController extends FOSRestController
      */
     public function getContext()
     {
-        $context = $this->contextService->createContext();
-
+        $player = $this->playerService->getOrCreatePlayer($this->playerService->getLastPlayer());
+        $context = $this->contextService->createContext($player);
         return new JsonResponse($context);
-//        $response = new Response($content);
-//        $response->headers->set("Content-Type", "application/json");
-//        return $response;
     }
 
     /**
@@ -74,22 +94,82 @@ class ApiController extends FOSRestController
      */
     public function submitContext(Request $request)
     {
-        $encoders = array(new JsonEncoder());
-        $normalizers = array(new ObjectNormalizer());
+        $encoders = [new JsonEncoder()];
+        $normalizers = [new ObjectNormalizer()];
 
         $serializer = new \Symfony\Component\Serializer\Serializer($normalizers, $encoders);
 
         $content = $request->getContent();
         $context = $serializer->deserialize($content, Context::class, 'json');
 
-        dump($context);
+        $this->handleContext($context);
 
         return new JsonResponse($context);
     }
+
 
     protected function getLastPlayer()
     {
         return $this->session->get(self::LAST_PLAYER);
     }
+
+    protected function handleContext(Context $context)
+    {
+        $questions = $this->getQuestions();
+        $player = $this->playerService->getOrCreatePlayer($this->playerService->getLastPlayer());
+        $answers = $this->getAnswers($player);
+
+        $totalPoints = 0;
+        foreach ($context->questions as $uiQuestion) {
+            /** @var Question $question */
+            $question = $questions[$uiQuestion['id']];
+            $userChoice = $this->getOrCreatePlayerChoice($player, $answers, $question, $uiQuestion);
+
+            $isPlayerCorrect = $userChoice->isCorrect();
+            $points = $isPlayerCorrect ? $question->getPoint() : 0;
+            $totalPoints += $points;
+        }
+
+        $player->setPoints($totalPoints);
+        $context->points = $totalPoints;
+        $this->entityManager->persist($player);
+        $this->entityManager->flush();
+    }
+
+    /**
+     * @param Player $player
+     * @param $answers
+     * @param Question $question
+     * @param $uiQuestion
+     * @throws \Doctrine\ORM\ORMException
+     *
+     */
+    public function getOrCreatePlayerChoice(Player $player, $answers, Question $question, $uiQuestion)
+    {
+        if (isset($answers[$question->getId()])) {
+            $choice = $answers[$question->getId()];
+        } else {
+            $choice = new PlayerChoice();
+            $choice->setPlayer($player);
+            $choice->setQuestion($question);
+        }
+        $choice->setConfirmed($uiQuestion['state'] == \App\UI\Question::STATE_CONFIRMED);
+        $choice->setAnswer($question->getAnswerById($uiQuestion['selectedAnswer']['id']));
+
+        $this->entityManager->persist($choice);
+
+        return $choice;
+    }
+
+    public function getAnswers(Player $player)
+    {
+        return $this->contextService->getAnswers($player);
+    }
+
+    public function getQuestions()
+    {
+        return $this->contextService->getQuestions();
+    }
+
 
 }

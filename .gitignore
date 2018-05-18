@@ -18,5 +18,5 @@ yarn-error.log
 ###< symfony/webpack-encore-pack ###
 
 ###> PHPSTORM
-/.idea/
+/.idea
 ###< PHPSTORM

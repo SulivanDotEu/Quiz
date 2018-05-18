@@ -24,7 +24,7 @@ class Question
     private $label;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Answer", mappedBy="question", cascade={"ALL"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Answer", mappedBy="question", fetch="EAGER", cascade={"ALL"})
      */
     private $answers;
 
@@ -38,9 +38,15 @@ class Question
      */
     private $point;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\PlayerChoice", mappedBy="question", orphanRemoval=true)
+     */
+    private $playerChoices;
+
     public function __construct()
     {
         $this->answers = new ArrayCollection();
+        $this->playerChoices = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -120,5 +126,44 @@ class Question
         }
 
         return $this;
+    }
+
+    /**
+     * @return Collection|PlayerChoice[]
+     */
+    public function getPlayerChoices(): Collection
+    {
+        return $this->playerChoices;
+    }
+
+    public function addPlayerChoice(PlayerChoice $playerChoice): self
+    {
+        if (!$this->playerChoices->contains($playerChoice)) {
+            $this->playerChoices[] = $playerChoice;
+            $playerChoice->setQuestion($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayerChoice(PlayerChoice $playerChoice): self
+    {
+        if ($this->playerChoices->contains($playerChoice)) {
+            $this->playerChoices->removeElement($playerChoice);
+            // set the owning side to null (unless already changed)
+            if ($playerChoice->getQuestion() === $this) {
+                $playerChoice->setQuestion(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getAnswerById($id)
+    {
+        foreach ($this->getAnswers() as $answer) {
+            if($answer->getId() == $id) return $answer;
+        }
+        return null;
     }
 }

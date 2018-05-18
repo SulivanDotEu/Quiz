@@ -18,7 +18,7 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Hello {{ player.name }}! ✅</h1>
+        <h1>Hello <a href="{{ path('public') }}">{{ player.name }}</a>! ✅</h1>
 
         <div id="app" :context="'{{ context|json_encode|raw }}'"></div>
 

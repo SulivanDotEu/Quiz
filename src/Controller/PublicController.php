@@ -90,6 +90,7 @@ class PublicController extends Controller
             $name = $form->get('name')->getData();
             $player = $this->getOrCreatePlayer($name, $this->playerRepository);
             $this->addPlayerInSession($player);
+            return $this->redirectToRoute("play");
         }
 
         return $this->render('public/index.html.twig', [

@@ -23,11 +23,13 @@ class Answer
     private $question;
 
     /**
+     * @var string
      * @ORM\Column(type="text")
      */
     private $label;
 
     /**
+     * @var bool
      * @ORM\Column(type="boolean")
      */
     private $correct;
